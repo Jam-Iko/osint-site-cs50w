@@ -1,8 +1,5 @@
 const question = document.getElementById("question");
 const choices = Array.from(document.getElementsByClassName("choice-text"));
-const questionCounterText = document.getElementById("questionCounter");
-const explanation = document.getElementById("explanation");
-const scoreText = document.getElementById("score");
 
 let currentQuestion = {};
 let acceptingAnswers = false;
@@ -17,8 +14,7 @@ let questions = [
 	    choice2: "<javascript>",
 	    choice3: "<js>",
 	    choice4: "<scripting>",
-	    answer: 1/*,
-	    explanation: "explanation"*/
+	    answer: 1
   	},
   	{
 	    question: "What is the correct syntax for referring to an external script called 'xxx.js'?",
@@ -26,8 +22,7 @@ let questions = [
 	    choice2: "<script name='xxx.js'>",
 	    choice3: "<script src='xxx.js'>",
 	    choice4: "<script file='xxx.js'>",
-	    answer: 3/*,
-	    explanation: "explanation"*/
+	    answer: 3
   	},
   	{
 	    question: "How do you write 'Hello World' in an alert box?",
@@ -35,8 +30,7 @@ let questions = [
 	    choice2: "alertBox('Hello World');",
 	    choice3: "msg('Hello World');",
 	    choice4: "alert('Hello World');",
-	    answer: 4/*,
-	    explanation: "explanation"*/
+	    answer: 4
   	}
 ];
 
@@ -56,8 +50,6 @@ getNewQuestion = () => {
 	}
 	
 	questionCounter++;
-	questionCounterText.innerText = questionCounter + "/" + MAX_QUESTIONS;
-
 	const questionIndex = Math.floor(Math.random() * availableQuestions.length);
 	currentQuestion = availableQuestions[questionIndex];
 	question.innerText = currentQuestion.question;
@@ -79,24 +71,13 @@ choices.forEach(choice => {
 		const selectedChoice = e.target;
 		const selectedAnswer = selectedChoice.dataset["number"];
 		
-		const classToApply = selectedAnswer == currentQuestion.answer ? "correct" : "incorrect";
-		
-		if(classToApply === "correct") {
-			incrementScore(CORRECT_BONUS);
-		};
-
+		const classToApply = selectedAnswer == currentQuestion.answer ? 'correct' : 'incorrect';
 		selectedChoice.parentElement.classList.add(classToApply);
-		
-		setTimeout() => {
+		setTimeout(() => {
 			selectedChoice.parentElement.classList.remove(classToApply);
 			getNewQuestion();
-		}, 1000;
+		}, 1000);
 	});
 });
-
-incrementScore = num => {
-	score += num;
-	scoreText.innerText = score;
-};
 
 startGame();
