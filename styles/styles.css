@@ -1,5 +1,5 @@
-body, .container-fluid {
-	background-color: #2F4454;
+body, .container-quiz, .container-fluid {
+	background-color: #E3E2DF;
 }
 
 .jumbotron {
@@ -11,17 +11,40 @@ body, .container-fluid {
 	color: #E3E2DF;
 }
 
+.card {
+	color: #1C3334;
+	background-color: #E3E2DF;
+	border: none;
+}
+
 /* https://github.com/jamesqquick/Build-A-Quiz-App-With-HTML-CSS-and-JavaScript */
+
 .btn {
 	font-size: 1.8rem;
 	padding: 1rem 0;
 	width: 20rem;
 	text-align: center;
-  	border: 0.1rem solid #56a5eb;
+  	border: 0.1rem solid #2F4454;
   	margin-bottom: 1rem;
   	text-decoration: none;
-  	color: #56a5eb;
-  	background-color: white;
+  	color: #2F4454;
+  	background-color: #C5C6C7;
+}
+
+.carousel-item {
+	opacity: 0.5;
+}
+
+th, td {
+	color: #1C3334;
+}
+
+th {
+	font-size: 2rem;
+}
+
+.carousel-item:hover {
+	opacity: 1;
 }
 
 .btn:hover {
