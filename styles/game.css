@@ -9,7 +9,13 @@
     line-height: 0.5rem;
 }
 
-/* do sass*/
+@media only screen and (max-width: 600px) {
+    .choice-container  {
+        line-height: 1.5rem;
+        font-size: 1.5rem;
+    }
+}
+
 .choice-container:hover {
     cursor: pointer;
     box-shadow: 0 0.4rem 1.4rem 0 rgba(86, 185, 235, 0.5);
