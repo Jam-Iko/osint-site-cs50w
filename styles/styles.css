@@ -11,14 +11,28 @@ body, .container-quiz, .container-fluid {
 	color: #E3E2DF;
 }
 
-.card {
+.card, .list-group-item {
 	color: #1C3334;
+}
+
+.card {
 	background-color: #E3E2DF;
 	border: none;
 }
 
-/* https://github.com/jamesqquick/Build-A-Quiz-App-With-HTML-CSS-and-JavaScript */
+th, td {
+	color: #1C3334;
+}
 
+th {
+	font-size: 2rem;
+}
+
+a:hover {
+	color: #44bec2;
+}
+
+/* https://github.com/jamesqquick/Build-A-Quiz-App-With-HTML-CSS-and-JavaScript */
 .btn {
 	font-size: 1.8rem;
 	padding: 1rem 0;
@@ -31,31 +45,9 @@ body, .container-quiz, .container-fluid {
   	background-color: #C5C6C7;
 }
 
-.carousel-item {
-	opacity: 0.5;
-}
-
-th, td {
-	color: #1C3334;
-}
-
-th {
-	font-size: 2rem;
-}
-
-.carousel-item:hover {
-	opacity: 1;
-}
-
 .btn:hover {
   	cursor: pointer;
   	box-shadow: 0 0.4rem 1.4rem 0 rgba(86, 185, 235, 0.5);
   	transform: translateY(-0.1rem);
   	transition: transform 150ms;
-}
-
-.btn[disabled]:hover {
-  	cursor: not-allowed;
-  	box-shadow: none;
-  	transform: none;
 }
