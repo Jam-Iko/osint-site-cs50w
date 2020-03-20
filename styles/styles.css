@@ -27,3 +27,7 @@ a:hover {
   	transform: translateY(-0.1rem);
   	transition: transform 150ms;
 }
+
+#protected, #unprotected, #couldDoBetter {
+	display: none;
+}
