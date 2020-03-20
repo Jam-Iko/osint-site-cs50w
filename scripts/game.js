@@ -1,3 +1,6 @@
+// Created based on additional online-course covered
+// Source https://github.com/jamesqquick/Build-A-Quiz-App-With-HTML-CSS-and-JavaScript
+
 const question = document.getElementById("question");
 const choices = Array.from(document.getElementsByClassName("choice-text"));
 const questionCounterText = document.getElementById("questionCounter");
@@ -12,33 +15,57 @@ let availableQuestions = [];
 
 let questions = [
   	{
-	    question: "Inside which HTML element do we put the JavaScript??",
-	    choice1: "<script>",
-	    choice2: "<javascript>",
-	    choice3: "<js>",
-	    choice4: "<scripting>",
-	    answer: 1
-  	},
-  	{
-	    question: "What is the correct syntax for referring to an external script called 'xxx.js'?",
-	    choice1: "<script href='xxx.js'>",
-	    choice2: "<script name='xxx.js'>",
-	    choice3: "<script src='xxx.js'>",
-	    choice4: "<script file='xxx.js'>",
+	    question: "When I need to set up a password I...",
+	    choice1: "Re-use the same one I had since the dawn of computers",
+	    choice2: "Use sequences such as 123456 or qwwerty",
+	    choice3: "Create a password containing letters, number and special characters",
+	    choice4: "Do I need to set up passwords?",
 	    answer: 3
   	},
   	{
-	    question: "How do you write 'Hello World' in an alert box?",
-	    choice1: "msgBox('Hello World');",
-	    choice2: "alertBox('Hello World');",
-	    choice3: "msg('Hello World');",
-	    choice4: "alert('Hello World');",
+	    question: "What are your privacy settings?",
+	    choice1: "Disabled location tracking, voice-controled assistants",
+	    choice2: "Blocked e-mail tracking and switched to DuckDuckGo",
+	    choice3: "All of the above",
+	    choice4: "Why do I need privacy settings?",
+	    answer: 3
+  	},
+  	{
+	    question: "I share on my social media my...",
+	    choice1: "Name, age, city, photos, family members",
+	    choice2: "Name, age, city, photos, family members, trips",
+	    choice3: "Name, age, city, photos, family members, trips, current location",
+	    choice4: "I try to avoid ovesharing",
 	    answer: 4
+  	},
+  	{
+	    question: "When son of the deposed king of Nigeria emails you directly, asking for help, you...",
+	    choice1: "Help",
+	    choice2: "Report phishing",
+	    choice3: "Ignore",
+	    choice4: "I have only dealt with daughter of the deposed king of Kenia",
+	    answer: 2
+  	},
+  	{
+	    question: "Do you have accounts that you do not use?",
+	    choice1: "No, I close them up and unsubscribe",
+	    choice2: "Sure, I keep them for future generations",
+	    choice3: "I can neither confirm nor deny it",
+	    choice4: "I sign up for everything, should I also use it?",
+	    answer: 1
+  	},
+  	{
+	    question: "Free public Wi-Fi network is...",
+	    choice1: "Something that I use constantly",
+	    choice2: "Last resort and only for non-sensitive information",
+	    choice3: "Forever stored in my device's memory",
+	    choice4: "Free Internet for free people",
+	    answer: 2
   	}
 ];
 
 const CORRECT_BONUS = 10;
-const MAX_QUESTIONS = 3;
+const MAX_QUESTIONS = 6;
 
 startGame = () => {
 	questionCounter = 0;
@@ -49,6 +76,7 @@ startGame = () => {
 
 getNewQuestion = () => {
 	if (availableQuestions.length === 0 || questionCounter >= MAX_QUESTIONS) {
+		localStorage.setItem("mostRecentScore", JSON.stringify(score));
 		return window.location.assign("result.html");
 	}
 	
@@ -77,13 +105,14 @@ choices.forEach(choice => {
 		const selectedChoice = e.target;
 		const selectedAnswer = selectedChoice.dataset["number"];
 		
-		const classToApply = selectedAnswer == currentQuestion.answer ? 'correct' : 'incorrect';
+		const classToApply = selectedAnswer == currentQuestion.answer ? "correct" : "incorrect";
 		
 		if (classToApply === "correct") {
 			incrementScore(CORRECT_BONUS);
 		};
 
 		selectedChoice.parentElement.classList.add(classToApply);
+		
 		setTimeout(() => {
 			selectedChoice.parentElement.classList.remove(classToApply);
 			getNewQuestion();

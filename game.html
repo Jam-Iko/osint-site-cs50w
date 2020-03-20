@@ -1,14 +1,21 @@
 <!DOCTYPE html>
 <html>
     <head>
-    	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    	<!-- Required meta tags -->
+	    <meta charset="utf-8">
+	    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+	    <!-- Bootstrap CSS -->
+	    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
     	<link href="styles/styles.css" rel="stylesheet">
+    	<link href="styles/stylesheet0.css" rel="stylesheet">
     	<link href="styles/game.css" rel="stylesheet">
         <title>Quiz</title>
     </head>
     <body>
 		<nav class="navbar navbar-expand-lg navbar-light bg-light">
-			<a class="navbar-brand" href="#">Top-Notch Security Company</a>
+			<a class="navbar-brand" href="index.html">Top-Notch Security Company</a>
 			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
 		    	<span class="navbar-toggler-icon"></span>
 			</button>
@@ -21,68 +28,58 @@
 		        		<a class="nav-link" href="tools.html">Tools</a>
 		      		</li>
 		      		<li class="nav-item">
-		        		<a class="nav-link" href="blog.html">Blog</a>
-		      		</li>
-		      		<li class="nav-item">
 		        		<a class="nav-link" href="quiz.html">Quiz<span class="sr-only">(current)</span></a>
 		      		</li>
 		    	</ul>
 		  	</div>
 		</nav>
-		<div class="jumbotron jumbotron-fluid">
-			<div class="container">
-				<div id="hud">
-					<div id="hud-item">
-						<p class="hud-prefix">
-							Question
-						</p>
-						<h3 class="hud-main-text" id="questionCounter">
-						</h3>
+		<div class="container-quiz">
+			<div class="jumbotron jumbotron-fluid">
+				<div class="container">
+					<div id="hud">
+						<div id="hud-item">
+							<p class="hud-prefix">
+								Question
+							</p>
+							<h4 class="hud-main-text" id="questionCounter">
+							</h4>
+						</div>
+						<div id="hud-item">
+							<p class="hud-prefix">
+								Score
+							</p>
+							<h4 class="hud-main-text" id="score">
+								0
+							</h4>
+						</div>
 					</div>
-					<div id="hud-item">
-						<p class="hud-prefix">
-							Score
-						</p>
-						<h3 class="hud-main-text" id="score">
-							0
-						</h3>
-					</div>
+				    <div id="game" class="justify-center d-flex-column">
+				    	<h2 id="question">Question?</h2>
+				    </div>
 				</div>
+			</div>
 
-			    <div id="game" class="justify-center flex-column">
-			    	<h1 id="question">Question?</h1>
-			    </div>
+			<div class="container">
+		    	<div class="choice-container">
+		    		<p class="choice-prefix">A</p>
+		    		<p class="choice-text" data-number="1">Choice 1</p>
+		    	</div>
+		    	<div class="choice-container">
+		    		<p class="choice-prefix">B</p>
+		    		<p class="choice-text" data-number="2">Choice 2</p>
+		    	</div>
+		    	<div class="choice-container">
+		    		<p class="choice-prefix">C</p>
+		    		<p class="choice-text" data-number="3">Choice 3</p>
+		    	</div>
+		    	<div class="choice-container">
+		    		<p class="choice-prefix">D</p>
+		    		<p class="choice-text" data-number="4">Choice 4</p>
+		    	</div>
 			</div>
 		</div>
 
-		<div class="container-fluid">
-	    	<div class="choice-container">
-	    		<p class="choice-prefix">A</p>
-	    		<p class="choice-text" data-number="1">Choice 1</p>
-	    	</div>
-	    	<div class="choice-container">
-	    		<p class="choice-prefix">B</p>
-	    		<p class="choice-text" data-number="2">Choice 2</p>
-	    	</div>
-	    	<div class="choice-container">
-	    		<p class="choice-prefix">C</p>
-	    		<p class="choice-text" data-number="3">Choice 3</p>
-	    	</div>
-	    	<div class="choice-container">
-	    		<p class="choice-prefix">D</p>
-	    		<p class="choice-text" data-number="4">Choice 4</p>
-	    	</div>
-		</div>
-
-		<div id="hud">
-			<div id="hud-item">
-				<h3 class="hud-main-text" id="explanation">
-					Explanation
-				</h3>
-			</div>
-		</div>
-
-		<script src="game.js"></script>
+		<script src="scripts/game.js"></script>
 		<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
 		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
