@@ -1,0 +1,24 @@
+.card, .list-group-item, th, td {
+  color: #153e40;
+}
+
+.jumbotron {
+  background-color: #153e40;
+  color: #E3E2DF;
+}
+
+body, .container-quiz, .container-fluid, .card {
+  background-color: #E3E2DF;
+  color: #153e40;
+}
+
+.lead, .display-4 {
+  color: #E3E2DF;
+}
+
+.btn {
+  background-color: #c5c6c7;
+  color: #153e40;
+}
+
+/*# sourceMappingURL=stylesheet0.css.map */

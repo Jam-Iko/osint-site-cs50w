@@ -1,0 +1,26 @@
+$bold-color: #153e40;
+$main-color: #E3E2DF;
+$button: #c5c6c7;
+
+.card, .list-group-item, th, td {
+	color: $bold-color;
+}
+
+.jumbotron {
+	background-color: $bold-color;
+	color: $main-color;
+}
+
+body, .container-quiz, .container-fluid, .card {
+	background-color: $main-color;
+	color: $bold-color;
+}
+
+.lead, .display-4 {
+	color: $main-color;
+}
+
+.btn {
+	background-color: $button;
+	color: $bold-color;
+}

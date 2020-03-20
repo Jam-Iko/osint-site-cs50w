@@ -1,27 +1,5 @@
-body, .container-quiz, .container-fluid {
-	background-color: #E3E2DF;
-}
-
-.jumbotron {
-	background-color: #1C3334;
-	color: #C5C6C7;
-}
-
-.lead, .display-4 {
-	color: #E3E2DF;
-}
-
-.card, .list-group-item {
-	color: #1C3334;
-}
-
 .card {
-	background-color: #E3E2DF;
 	border: none;
-}
-
-th, td {
-	color: #1C3334;
 }
 
 th {
@@ -38,11 +16,9 @@ a:hover {
 	padding: 1rem 0;
 	width: 20rem;
 	text-align: center;
-  	border: 0.1rem solid #2F4454;
-  	margin-bottom: 1rem;
-  	text-decoration: none;
-  	color: #2F4454;
-  	background-color: #C5C6C7;
+    border: 0.1rem solid #2F4454;
+    margin-bottom: 1rem;
+    text-decoration: none;
 }
 
 .btn:hover {
