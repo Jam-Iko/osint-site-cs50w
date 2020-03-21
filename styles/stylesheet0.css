@@ -6,14 +6,13 @@
   background-color: #153e40;
   color: #E3E2DF;
 }
+.jumbotron .lead, .jumbotron .display-4 {
+  color: #E3E2DF;
+}
 
 body, .container-quiz, .container-fluid, .card {
   background-color: #E3E2DF;
   color: #153e40;
-}
-
-.lead, .display-4 {
-  color: #E3E2DF;
 }
 
 .btn {

@@ -18,7 +18,8 @@ Javascript files (./scripts):
 	-game.js (Quiz functionality, based on additional online course, link to original source  included)
 	-result.js (Functionality to show personilized results, based on number of correct answers provided by the user)
 CSS and SCSS files (./styles):
-	-stylesheet0.css (Created using Sass, setting primary colors for background and text used in the project)
+	-stylesheet0.css (Created using Sass, setting primary colors for background and text used in the project, use of SCSS variables and nesting)
+	-stylesheet1.css ((Created using Sass, setting font-size for game.html, use of SCSS inheritance)
 	-styles.css (Stylesheet for all pages except game.html)
 	-game.css (Stylesheet for game.html)
 

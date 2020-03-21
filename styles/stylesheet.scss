@@ -9,6 +9,10 @@ $button: #c5c6c7;
 .jumbotron {
 	background-color: $bold-color;
 	color: $main-color;
+
+	.lead, .display-4 {
+		color: $main-color;
+	}
 }
 
 body, .container-quiz, .container-fluid, .card {
@@ -16,11 +20,8 @@ body, .container-quiz, .container-fluid, .card {
 	color: $bold-color;
 }
 
-.lead, .display-4 {
-	color: $main-color;
-}
-
 .btn {
 	background-color: $button;
 	color: $bold-color;
 }
+
