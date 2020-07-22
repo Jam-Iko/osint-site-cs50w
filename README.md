@@ -2,7 +2,7 @@
 
 Created as Project 0 for CS50's Web Programming with Python and JavaScript (2018 edition)
 
-## <https://jam-iko.github.io/project-0/>
+## <https://jam-iko.github.io/osint-site-cs50w/>
 
 Project includes:
 
