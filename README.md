@@ -5,6 +5,7 @@ Created as Project 0 for CS50's Web Programming with Python and JavaScript (2018
 ## <https://jam-iko.github.io/project-0/>
 
 Project includes:
+
 HTML files:
 
 	-index.html (General information about OSINT. Bootstrap elements used: card, columns)
