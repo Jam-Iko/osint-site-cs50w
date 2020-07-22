@@ -1,8 +1,9 @@
-# Project 0
+# Information Security and Open Source Intelligence Site
 
-Web Programming with Python and JavaScript
+Created as Project 0 for CS50's Web Programming with Python and JavaScript (2018 edition)
 
-For Project0 I have developed a web-site dedicated to Information Security and Open Source Intelligence. 
+## <https://jam-iko.github.io/project-0/>
+
 Project includes:
 HTML files:
 
